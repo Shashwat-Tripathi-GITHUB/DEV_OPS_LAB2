@@ -13,5 +13,5 @@
  ```bash
 git branch -d <branch_name>
 ```
-
+![Added the SSH Key] {Adding SSH Key.png}
 
