@@ -13,5 +13,5 @@
  ```bash
 git branch -d <branch_name>
 ```
-![Added the SSH Key] {https://github.com/Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2/blob/main/Adding%20SSH%20Key.png}
+![Added the SSH Key] (https://github.com/Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2/blob/main/Adding%20SSH%20Key.png)
 
