@@ -1,0 +1,1039 @@
+
+9702@LAPTOP-CR701MLC MINGW64 ~
+$ cd "D:\3rd Year\6th Semester\DevOps Lab\Lab2"
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2
+$ ls
+Readme.md
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2
+$ git init
+Initialized empty Git repository in D:/3rd Year/6th Semester/DevOps Lab/Lab2/.git/
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (master)
+$ ls -a
+./  ../  .git/  Readme.md
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (master)
+$ git add Readme.md
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (master)
+$ git commit -m "first commit"
+[master (root-commit) ea87f1a] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Readme.md
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (master)
+$ git branch
+* master
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (master)
+$ git branch -M main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git remote -v
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git remote add origin git@github.com:Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2.git
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git remote -v
+origin  git@github.com:Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2.git (fetch)
+origin  git@github.com:Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2.git (push)
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ ls -a
+./  ../  .git/  Readme.md
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git add .
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git push -u origin main
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ ssh-keygen -t ed25519 -C "tripathishashwat72@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/9702/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/9702/.ssh/id_ed25519
+Your public key has been saved in /c/Users/9702/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:xVJvoxMeuSiYfNTQrQwhLSR715GyVdgO8yBsAE0VJJ0 tripathishashwat72@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|  o=*B*=.*o      |
+|   oooE+O+oo     |
+|  . .ooB+B* +    |
+|   o =. o=o* .   |
+|    + o S =      |
+|     . .   .     |
+|                 |
+|                 |
+|                 |
++----[SHA256]-----+
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ eval $(ssh-agent -s)
+Agent pid 1163
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ ssh-add ~/.ssh/id_ed25519
+Identity added: /c/Users/9702/.ssh/id_ed25519 (tripathishashwat72@gmail.com)
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ cat ~/.ssh/id_ed25519.pub
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIByx+rZx8bDVYz5r6Uya1JYPezQJt6x9Mw9CSS7i5AZp tripathishashwat72@gmail.com
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ ^C
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 245 bytes | 245.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ touch m1.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ ls
+Readme.md  m1.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ touch m2.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ echo "This is file m1" >> m1.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ echo "This is file m2" >> m2.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git add m1.txt
+warning: in the working copy of 'm1.txt', LF will be replaced by CRLF the next time Git touches it
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git commit -m "This is the commit for file m1"
+[main 94c6692] This is the commit for file m1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 m1.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 327 bytes | 327.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2.git
+   ea87f1a..94c6692  main -> main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git add m2.txt
+warning: in the working copy of 'm2.txt', LF will be replaced by CRLF the next time Git touches it
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git commit -m "This is the commit for m2"
+[main 87dcb08] This is the commit for m2
+ 1 file changed, 1 insertion(+)
+ create mode 100644 m2.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 352 bytes | 352.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Shashwat-Tripathi-GITHUB/DEV_OPS_LAB2.git
+   94c6692..87dcb08  main -> main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ touch lab_details & git add lab_details & git commit -m "Commit for lab details"
+[1] 1243
+[2] 1244
+[main e47a6fb] Commit for lab details
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 lab_details
+[1]   Done                    touch lab_details
+[2]+  Done                    git add lab_details
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git log
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+commit e47a6fbb39297d76d156025119a762bbb01aa03a (HEAD -> main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:48:40 2025 +0530
+
+    Commit for lab details
+
+commit 87dcb084be3774de81e1828d4b2621ba2cf04052 (origin/main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:44:22 2025 +0530
+
+    This is the commit for m2
+
+commit 94c6692e1938d69db2bd4a623a46bde24eed41b2
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:43:39 2025 +0530
+
+    This is the commit for file m1
+
+commit ea87f1ad387d7e5b6930ac156731e7d57cbda288
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:23:37 2025 +0530
+
+    first commit
+(END)
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+commit e47a6fbb39297d76d156025119a762bbb01aa03a (HEAD -> main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:48:40 2025 +0530
+
+    Commit for lab details
+
+commit 87dcb084be3774de81e1828d4b2621ba2cf04052 (origin/main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:44:22 2025 +0530
+
+    This is the commit for m2
+
+commit 94c6692e1938d69db2bd4a623a46bde24eed41b2
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:43:39 2025 +0530
+
+    This is the commit for file m1
+
+commit ea87f1ad387d7e5b6930ac156731e7d57cbda288
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:23:37 2025 +0530
+
+    first commit
+...skipping...
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  ESC-U                Clear search highlighting.
+  &pattern          *  Display only matching lines.
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+        ^W       WRAP search if no match found.
+ ---------------------------------------------------------------------------
+
+                           JUMPING
+
+  g  <  ESC-<       *  Go to first line in file (or line N).
+  G  >  ESC->       *  Go to last line in file (or line N).
+  p  %              *  Go to beginning of file (or N percent into file).
+  t                 *  Go to the (N-th) next tag.
+  T                 *  Go to the (N-th) previous tag.
+  {  (  [           *  Find close bracket } ) ].
+  }  )  ]           *  Find open bracket { ( [.
+  ESC-^F <c1> <c2>  *  Find close bracket <c2>.
+  ESC-^B <c1> <c2>  *  Find open bracket <c1>.
+        ---------------------------------------------------
+        Each "find close bracket" command goes forward to the close bracket
+          matching the (N-th) open bracket in the top line.
+        Each "find open bracket" command goes backward to the open bracket
+          matching the (N-th) close bracket in the bottom line.
+
+  m<letter>            Mark the current top line with <letter>.
+  M<letter>            Mark the current bottom line with <letter>.
+  '<letter>            Go to a previously marked position.
+  ''                   Go to the previous position.
+  ^X^X                 Same as '.
+  ESC-m<letter>        Clear a mark.
+        ---------------------------------------------------
+        A mark is any upper-case or lower-case letter.
+        Certain marks are predefined:
+             ^  means  beginning of the file
+             $  means  end of the file
+ ---------------------------------------------------------------------------
+
+                        CHANGING FILES
+
+  :e [file]            Examine a new file.
+  ^X^V                 Same as :e.
+  :n                *  Examine the (N-th) next file from the command line.
+  :p                *  Examine the (N-th) previous file from the command line.
+  :x                *  Examine the first (or N-th) file from the command line.
+  :d                   Delete the current file from the command line list.
+  =  ^G  :f            Print current file name.
+ ---------------------------------------------------------------------------
+
+                    MISCELLANEOUS COMMANDS
+
+  -<flag>              Toggle a command line option [see OPTIONS below].
+  --<name>             Toggle a command line option, by name.
+  _<flag>              Display the setting of a command line option.
+  __<name>             Display the setting of an option, by name.
+  +cmd                 Execute the less cmd each time a new file is examined.
+
+  !command             Execute the shell command with $SHELL.
+  |Xcommand            Pipe file between current pos & mark X to shell command.
+  s file               Save input to a file.
+  v                    Edit the current file with $VISUAL or $EDITOR.
+  V                    Print version number of "less".
+ ---------------------------------------------------------------------------
+
+                           OPTIONS
+
+        Most options may be changed either on the command line,
+        or from within less by using the - or -- command.
+        Options may be given in one of two forms: either a single
+        character preceded by a -, or a name preceded by --.
+
+  -?  ........  --help
+                  Display help (from command line).
+  -a  ........  --search-skip-screen
+                  Search skips current screen.
+  -A  ........  --SEARCH-SKIP-SCREEN
+                  Search starts just after target line.
+  -b [N]  ....  --buffers=[N]
+                  Number of buffers.
+  -B  ........  --auto-buffers
+                  Don't automatically allocate buffers for pipes.
+  -c  ........  --clear-screen
+                  Repaint by clearing rather than scrolling.
+  -d  ........  --dumb
+                  Dumb terminal.
+  -D xcolor  .  --color=xcolor
+                  Set screen colors.
+  -e  -E  ....  --quit-at-eof  --QUIT-AT-EOF
+                  Quit at end of file.
+  -f  ........  --force
+                  Force open non-regular files.
+  -F  ........  --quit-if-one-screen
+                  Quit if entire file fits on first screen.
+  -g  ........  --hilite-search
+                  Highlight only last match for searches.
+  -G  ........  --HILITE-SEARCH
+                  Don't highlight any matches for searches.
+  -h [N]  ....  --max-back-scroll=[N]
+                  Backward scroll limit.
+  -i  ........  --ignore-case
+                  Ignore case in searches that do not contain uppercase.
+  -I  ........  --IGNORE-CASE
+                  Ignore case in all searches.
+  -j [N]  ....  --jump-target=[N]
+                  Screen position of target lines.
+  -J  ........  --status-column
+                  Display a status column at left edge of screen.
+  -k [file]  .  --lesskey-file=[file]
+                  Use a lesskey file.
+  -K  ........  --quit-on-intr
+                  Exit less in response to ctrl-C.
+  -L  ........  --no-lessopen
+                  Ignore the LESSOPEN environment variable.
+  -m  -M  ....  --long-prompt  --LONG-PROMPT
+                  Set prompt style.
+  -n .........  --line-numbers
+                  Suppress line numbers in prompts and messages.
+  -N .........  --LINE-NUMBERS
+                  Display line number at start of each line.
+  -o [file]  .  --log-file=[file]
+                  Copy to log file (standard input only).
+  -O [file]  .  --LOG-FILE=[file]
+                  Copy to log file (unconditionally overwrite).
+  -p [pattern]  --pattern=[pattern]
+                  Start at pattern (from command line).
+  -P [prompt]   --prompt=[prompt]
+                  Define new prompt.
+  -q  -Q  ....  --quiet  --QUIET  --silent --SILENT
+                  Quiet the terminal bell.
+  -r  -R  ....  --raw-control-chars  --RAW-CONTROL-CHARS
+                  Output "raw" control characters.
+  -s  ........  --squeeze-blank-lines
+                  Squeeze multiple blank lines.
+  -S  ........  --chop-long-lines
+                  Chop (truncate) long lines rather than wrapping.
+  -t [tag]  ..  --tag=[tag]
+                  Find a tag.
+  -T [tagsfile] --tag-file=[tagsfile]
+                  Use an alternate tags file.
+  -u  -U  ....  --underline-special  --UNDERLINE-SPECIAL
+                  Change handling of backspaces.
+  -V  ........  --version
+                  Display the version number of "less".
+  -w  ........  --hilite-unread
+                  Highlight first new line after forward-screen.
+  -W  ........  --HILITE-UNREAD
+                  Highlight first new line after any forward movement.
+  -x [N[,...]]  --tabs=[N[,...]]
+                  Set tab stops.
+  -X  ........  --no-init
+                  Don't use termcap init/deinit strings.
+  -y [N]  ....  --max-forw-scroll=[N]
+                  Forward scroll limit.
+  -z [N]  ....  --window=[N]
+                  Set size of window.
+  -" [c[c]]  .  --quotes=[c[c]]
+                  Set shell quote characters.
+  -~  ........  --tilde
+                  Don't display tildes after end of file.
+  -# [N]  ....  --shift=[N]
+                  Set horizontal scroll amount (0 = one half screen width).
+                --exit-follow-on-close
+                  Exit F command on a pipe when writer closes pipe.
+                --file-size
+                  Automatically determine the size of the input file.
+                --follow-name
+                  The F command changes files if the input file is renamed.
+                --header=[N[,M]]
+                  Use N lines and M columns to display file headers.
+                --incsearch
+                  Search file as each pattern character is typed in.
+                --intr=C
+                  Use C instead of ^X to interrupt a read.
+                --line-num-width=N
+                  Set the width of the -N line number field to N characters.
+                --modelines=N
+                  Read N lines from the input file and look for vim modelines.
+                --mouse
+                  Enable mouse input.
+                --no-keypad
+                  Don't send termcap keypad init/deinit strings.
+                --no-histdups
+                  Remove duplicates from command history.
+                --no-number-headers
+                  Don't give line numbers to header lines.
+                --no-search-headers
+                  Don't search in header lines or columns.
+                --no-vbell
+                  Disable the terminal's visual bell.
+                --redraw-on-quit
+                  Redraw final screen when quitting.
+                --rscroll=C
+                  Set the character used to mark truncated lines.
+                --save-marks
+                  Retain marks across invocations of less.
+                --search-options=[EFKNRW-]
+                  Set default options for every search.
+                --status-col-width=N
+                  Set the width of the -J status column to N characters.
+                --status-line
+                  Highlight or color the entire line containing a mark.
+                --use-backslash
+                  Subsequent options use backslash as escape char.
+                --use-color
+                  Enables colored text.
+                --wheel-lines=N
+                  Each click of the mouse wheel moves N lines.
+                --wordwrap
+                  Wrap lines at spaces.
+
+
+ ---------------------------------------------------------------------------
+
+                          LINE EDITING
+
+        These keys can be used to edit text being entered
+        on the "command line" at the bottom of the screen.
+
+ RightArrow ..................... ESC-l ... Move cursor right one character.
+ LeftArrow ...................... ESC-h ... Move cursor left one character.
+ ctrl-RightArrow  ESC-RightArrow  ESC-w ... Move cursor right one word.
+ ctrl-LeftArrow   ESC-LeftArrow   ESC-b ... Move cursor left one word.
+ HOME ........................... ESC-0 ... Move cursor to start of line.
+ END ............................ ESC-$ ... Move cursor to end of line.
+ BACKSPACE ................................ Delete char to left of cursor.
+ DELETE ......................... ESC-x ... Delete char under cursor.
+ ctrl-BACKSPACE   ESC-BACKSPACE ........... Delete word to left of cursor.
+ ctrl-DELETE .... ESC-DELETE .... ESC-X ... Delete word under cursor.
+ ctrl-U ......... ESC (MS-DOS only) ....... Delete entire line.
+ UpArrow ........................ ESC-k ... Retrieve previous command line.
+ DownArrow ...................... ESC-j ... Retrieve next command line.
+ TAB ...................................... Complete filename & cycle.
+ SHIFT-TAB ...................... ESC-TAB   Complete filename & reverse cycle.
+ ctrl-L ................................... Complete filename, list all.
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+  ESC-(  LeftArrow  *  Left  one half screen width (or N positions).
+  ESC-}  ^RightArrow   Right to last column displayed.
+  ESC-{  ^LeftArrow    Left  to first column.
+  F                    Forward forever; like "tail -f".
+  ESC-F                Like F but stop when search pattern is found.
+  r  ^R  ^L            Repaint screen.
+  R                    Repaint screen, discarding buffered input.
+        ---------------------------------------------------
+        Default "window" is the screen height.
+        Default "half-window" is half of the screen height.
+ ---------------------------------------------------------------------------
+
+                          SEARCHING
+
+  /pattern          *  Search forward for (N-th) matching line.
+  ?pattern          *  Search backward for (N-th) matching line.
+  n                 *  Repeat previous search (for N-th occurrence).
+  N                 *  Repeat previous search in reverse direction.
+  ESC-n             *  Repeat previous search, spanning files.
+  ESC-N             *  Repeat previous search, reverse dir. & spanning files.
+  ESC-u                Undo (toggle) search highlighting.
+  ESC-U                Clear search highlighting.
+  &pattern          *  Display only matching lines.
+        ---------------------------------------------------
+        A search pattern may begin with one or more of:
+        ^N or !  Search for NON-matching lines.
+        ^E or *  Search multiple files (pass thru END OF FILE).
+        ^F or @  Start search at FIRST file (for /) or last file (for ?).
+        ^K       Highlight matches, but don't move (KEEP position).
+        ^R       Don't use REGULAR EXPRESSIONS.
+        ^W       WRAP search if no match found.
+ ---------------------------------------------------------------------------
+
+                           JUMPING
+
+  g  <  ESC-<       *  Go to first line in file (or line N).
+  G  >  ESC->       *  Go to last line in file (or line N).
+  p  %              *  Go to beginning of file (or N percent into file).
+  t                 *  Go to the (N-th) next tag.
+  T                 *  Go to the (N-th) previous tag.
+  {  (  [           *  Find close bracket } ) ].
+  }  )  ]           *  Find open bracket { ( [.
+  ESC-^F <c1> <c2>  *  Find close bracket <c2>.
+  ESC-^B <c1> <c2>  *  Find open bracket <c1>.
+        ---------------------------------------------------
+        Each "find close bracket" command goes forward to the close bracket
+          matching the (N-th) open bracket in the top line.
+        Each "find open bracket" command goes backward to the open bracket
+          matching the (N-th) close bracket in the bottom line.
+
+  m<letter>            Mark the current top line with <letter>.
+  M<letter>            Mark the current bottom line with <letter>.
+  '<letter>            Go to a previously marked position.
+  ''                   Go to the previous position.
+  ^X^X                 Same as '.
+  ESC-m<letter>        Clear a mark.
+        ---------------------------------------------------
+        A mark is any upper-case or lower-case letter.
+        Certain marks are predefined:
+             ^  means  beginning of the file
+             $  means  end of the file
+ ---------------------------------------------------------------------------
+
+                        CHANGING FILES
+
+  :e [file]            Examine a new file.
+  ^X^V                 Same as :e.
+  :n                *  Examine the (N-th) next file from the command line.
+  :p                *  Examine the (N-th) previous file from the command line.
+  :x                *  Examine the first (or N-th) file from the command line.
+  :d                   Delete the current file from the command line list.
+  =  ^G  :f            Print current file name.
+ ---------------------------------------------------------------------------
+
+                    MISCELLANEOUS COMMANDS
+
+  -<flag>              Toggle a command line option [see OPTIONS below].
+  --<name>             Toggle a command line option, by name.
+  _<flag>              Display the setting of a command line option.
+  __<name>             Display the setting of an option, by name.
+  +cmd                 Execute the less cmd each time a new file is examined.
+
+  !command             Execute the shell command with $SHELL.
+  |Xcommand            Pipe file between current pos & mark X to shell command.
+  s file               Save input to a file.
+  v                    Edit the current file with $VISUAL or $EDITOR.
+  V                    Print version number of "less".
+ ---------------------------------------------------------------------------
+
+                           OPTIONS
+
+        Most options may be changed either on the command line,
+        or from within less by using the - or -- command.
+        Options may be given in one of two forms: either a single
+        character preceded by a -, or a name preceded by --.
+
+  -?  ........  --help
+                  Display help (from command line).
+  -a  ........  --search-skip-screen
+                  Search skips current screen.
+  -A  ........  --SEARCH-SKIP-SCREEN
+                  Search starts just after target line.
+  -b [N]  ....  --buffers=[N]
+                  Number of buffers.
+
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+...skipping...
+
+
+                   SUMMARY OF LESS COMMANDS
+
+      Commands marked with * may be preceded by a number, N.
+      Notes in parentheses indicate the behavior if N is given.
+      A key preceded by a caret indicates the Ctrl key; thus ^K is ctrl-K.
+
+  h  H                 Display this help.
+  q  :q  Q  :Q  ZZ     Exit.
+ ---------------------------------------------------------------------------
+
+                           MOVING
+
+  e  ^E  j  ^N  CR  *  Forward  one line   (or N lines).
+  y  ^Y  k  ^K  ^P  *  Backward one line   (or N lines).
+  f  ^F  ^V  SPACE  *  Forward  one window (or N lines).
+  b  ^B  ESC-v      *  Backward one window (or N lines).
+  z                 *  Forward  one window (and set window to N).
+  w                 *  Backward one window (and set window to N).
+  ESC-SPACE         *  Forward  one window, but don't stop at end-of-file.
+  d  ^D             *  Forward  one half-window (and set half-window to N).
+  u  ^U             *  Backward one half-window (and set half-window to N).
+  ESC-)  RightArrow *  Right one half screen width (or N positions).
+HELP -- Press RETURN for more, or q when done...skipping...
+commit e47a6fbb39297d76d156025119a762bbb01aa03a (HEAD -> main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:48:40 2025 +0530
+
+    Commit for lab details
+
+commit 87dcb084be3774de81e1828d4b2621ba2cf04052 (origin/main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:44:22 2025 +0530
+
+    This is the commit for m2
+
+commit 94c6692e1938d69db2bd4a623a46bde24eed41b2
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:43:39 2025 +0530
+
+    This is the commit for file m1
+
+commit ea87f1ad387d7e5b6930ac156731e7d57cbda288
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:23:37 2025 +0530
+
+    first commit
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git branch
+* main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git branch -a
+* main
+  remotes/origin/main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git branch -r
+  origin/main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git branch featureA
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ touch f1.txt & git add f1.txt & git commit -m "Added f1 to feature branch"
+[1] 1279
+[2] 1280
+[main ee7fcdf] Added f1 to feature branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f1.txt
+[1]-  Done                    touch f1.txt
+[2]+  Done                    git add f1.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ touch f2.txt & git add f2.txt & git commit -m "Added f2 to feature branch"
+[1] 1286
+[2] 1287
+[main 9957160] Added f2 to feature branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 f2.txt
+[1]-  Done                    touch f2.txt
+[2]+  Done                    git add f2.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git branch
+  featureA
+* main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git log
+commit 9957160866fae9c57929e3fb4c65510570ea3597 (HEAD -> main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 13:00:50 2025 +0530
+
+    Added f2 to feature branch
+
+commit ee7fcdfbf247e9bce88a7be3ed9d618d6b7aaeea
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 13:00:38 2025 +0530
+
+    Added f1 to feature branch
+
+commit e47a6fbb39297d76d156025119a762bbb01aa03a (featureA)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:48:40 2025 +0530
+
+    Commit for lab details
+
+commit 87dcb084be3774de81e1828d4b2621ba2cf04052 (origin/main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:44:22 2025 +0530
+
+    This is the commit for m2
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git checkout featureA
+Switched to branch 'featureA'
+D       lab_details
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (featureA)
+$ git log
+commit e47a6fbb39297d76d156025119a762bbb01aa03a (HEAD -> featureA)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:48:40 2025 +0530
+
+    Commit for lab details
+
+commit 87dcb084be3774de81e1828d4b2621ba2cf04052 (origin/main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:44:22 2025 +0530
+
+    This is the commit for m2
+
+commit 94c6692e1938d69db2bd4a623a46bde24eed41b2
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:43:39 2025 +0530
+
+    This is the commit for file m1
+
+commit ea87f1ad387d7e5b6930ac156731e7d57cbda288
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:23:37 2025 +0530
+
+    first commit
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (featureA)
+$ git branch
+* featureA
+  main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (featureA)
+$ git checkout main
+Switched to branch 'main'
+D       lab_details
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ touch m3.txt & git add m3.txt & git commit -m "Added m3 to feature branch"
+[1] 1327
+[2] 1328
+[main 9605bf2] Added m3 to feature branch
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 m3.txt
+[1]-  Done                    touch m3.txt
+[2]+  Done                    git add m3.txt
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git checkout featureA
+Switched to branch 'featureA'
+D       lab_details
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (featureA)
+$ git log
+commit e47a6fbb39297d76d156025119a762bbb01aa03a (HEAD -> featureA)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:48:40 2025 +0530
+
+    Commit for lab details
+
+commit 87dcb084be3774de81e1828d4b2621ba2cf04052 (origin/main)
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:44:22 2025 +0530
+
+    This is the commit for m2
+
+commit 94c6692e1938d69db2bd4a623a46bde24eed41b2
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:43:39 2025 +0530
+
+    This is the commit for file m1
+
+commit ea87f1ad387d7e5b6930ac156731e7d57cbda288
+Author: SHASHWAT-TRIPATHI-GITHUB <tripathishashwat72@gmail.com>
+Date:   Tue Jan 21 12:23:37 2025 +0530
+
+    first commit
+
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (featureA)
+$
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (featureA)
+$ git checkout ea87f1
+Note: switching to 'ea87f1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ea87f1a first commit
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 ((ea87f1a...))
+$ git checkout .
+Updated 0 paths from the index
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 ((ea87f1a...))
+$ git checkout main
+Previous HEAD position was ea87f1a first commit
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git checkout featureA
+Switched to branch 'featureA'
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (featureA)
+$ git branch -m featureA feature1
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git branch
+* feature1
+  main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git branch -c feature1 feature2
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git branch
+* feature1
+  feature2
+  main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git branch -d feature2
+Deleted branch feature2 (was e47a6fb).
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git branch
+* feature1
+  main
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git branch -d feature1
+error: Cannot delete branch 'feature1' checked out at 'D:/3rd Year/6th Semester/DevOps Lab/Lab2'
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git merge feature1
+Already up to date.
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (feature1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$ git merge feature1
+Already up to date.
+
+9702@LAPTOP-CR701MLC MINGW64 /d/3rd Year/6th Semester/DevOps Lab/Lab2 (main)
+$

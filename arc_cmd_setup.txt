@@ -1,0 +1,219 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS D:\ARC_VIPS> git clone "https://github.com/Shashwat-Tripathi-GITHUB/ARC_VIPS.git"
+Cloning into 'ARC_VIPS'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (6/6), done.
+PS D:\ARC_VIPS> git fetch --all
+fatal: not a git repository (or any of the parent directories): .git
+PS D:\ARC_VIPS> cd ARC_VIPS
+PS D:\ARC_VIPS\ARC_VIPS> git fetch --all
+PS D:\ARC_VIPS\ARC_VIPS> git checkout develop
+Switched to a new branch 'develop'
+branch 'develop' set up to track 'origin/develop'.
+PS D:\ARC_VIPS\ARC_VIPS> git add .
+warning: in the working copy of '.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'README_default.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/public/index.html', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/App.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/App.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/App.test.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/Footer.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/Footer.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/NavBar.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/NavBar.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/AlumniDetails.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/AlumniDetails.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/CareerDb.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/CareerDb.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/Register.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/RegistrationPage.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/RegistrationPage.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/StudentDetails.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/components/pages/StudentDetails.jsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/index.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/reportWebVitals.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'frontend/src/setupTests.js', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+PS D:\ARC_VIPS\ARC_VIPS> git commit -m "docs : Created the basic directory sturcture that needs to be followed by the team"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got '9702@LAPTOP-CR701MLC.(none)')
+PS D:\ARC_VIPS\ARC_VIPS> git config --global user.email "tripathishashwat72@gmail.com"
+PS D:\ARC_VIPS\ARC_VIPS> git config --global user.name "SHASHWAT-TRIPATHI-GITHUB"
+PS D:\ARC_VIPS\ARC_VIPS> git commit -m "docs : Created the basic directory sturcture that needs to be followed by the team"
+[develop 3731012] docs : Created the basic directory sturcture that needs to be followed by the team
+ 27 files changed, 18460 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 README_default.md
+ create mode 100644 backend/server.js
+ create mode 100644 frontend/public/index.html
+ create mode 100644 frontend/src/App.css
+ create mode 100644 frontend/src/App.js
+ create mode 100644 frontend/src/App.test.js
+ create mode 100644 frontend/src/components/Footer.css
+ create mode 100644 frontend/src/components/Footer.jsx
+ create mode 100644 frontend/src/components/NavBar.css
+ create mode 100644 frontend/src/components/NavBar.jsx
+ create mode 100644 frontend/src/components/pages/AlumniDetails.css
+ create mode 100644 frontend/src/components/pages/AlumniDetails.jsx
+ create mode 100644 frontend/src/components/pages/CareerDb.css
+ create mode 100644 frontend/src/components/pages/CareerDb.jsx
+ create mode 100644 frontend/src/components/pages/Register.jsx
+ create mode 100644 frontend/src/components/pages/RegistrationPage.css
+ create mode 100644 frontend/src/components/pages/RegistrationPage.jsx
+ create mode 100644 frontend/src/components/pages/StudentDetails.css
+ create mode 100644 frontend/src/components/pages/StudentDetails.jsx
+ create mode 100644 frontend/src/index.css
+ create mode 100644 frontend/src/index.js
+ create mode 100644 frontend/src/logo.svg
+ create mode 100644 frontend/src/reportWebVitals.js
+ create mode 100644 frontend/src/setupTests.js
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+PS D:\ARC_VIPS\ARC_VIPS> git push
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (31/31), done.
+Writing objects: 100% (34/34), 168.82 KiB | 4.12 MiB/s, done.
+Total 34 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/Shashwat-Tripathi-GITHUB/ARC_VIPS.git
+   c298ad4..3731012  develop -> develop
+PS D:\ARC_VIPS\ARC_VIPS> git fetch -h
+usage: git fetch [<options>] [<repository> [<refspec>...]]
+   or: git fetch [<options>] <group>
+   or: git fetch --multiple [<options>] [(<repository> | <group>)...]
+   or: git fetch --all [<options>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --all                 fetch from all remotes
+    --set-upstream        set upstream for git pull/fetch
+    -a, --append          append to .git/FETCH_HEAD instead of overwriting
+    --atomic              use atomic transaction to update references
+    --upload-pack <path>  path to upload pack on remote end
+    -f, --force           force overwrite of local reference
+    -m, --multiple        fetch from multiple remotes
+    -t, --tags            fetch all tags and associated objects
+    -n                    do not fetch all tags (--no-tags)
+    -j, --jobs <n>        number of submodules fetched in parallel
+    --prefetch            modify the refspec to place all refs within refs/prefetch/
+    -p, --prune           prune remote-tracking branches no longer on remote
+    -P, --prune-tags      prune local tags no longer on remote and clobber changed tags
+    --recurse-submodules[=<on-demand>]
+                          control recursive fetching of submodules
+    --dry-run             dry run
+    --write-fetch-head    write fetched references to the FETCH_HEAD file
+    -k, --keep            keep downloaded pack
+    -u, --update-head-ok  allow updating of HEAD ref
+    --progress            force progress reporting
+    --depth <depth>       deepen history of shallow clone
+    --shallow-since <time>
+                          deepen history of shallow repository based on time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --deepen <n>          deepen history of shallow clone
+    --unshallow           convert to a complete repository
+    --refetch             re-fetch without negotiating common commits
+    --update-shallow      accept refs that update .git/shallow
+    --refmap <refmap>     specify fetch refmap
+    -o, --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --negotiation-tip <revision>
+                          report that we have only objects reachable from this object
+    --negotiate-only      do not fetch a packfile; instead, print ancestors of negotiation tips
+    --filter <args>       object filtering
+    --auto-maintenance    run 'maintenance --auto' after fetching
+    --auto-gc             run 'maintenance --auto' after fetching
+    --show-forced-updates
+                          check for forced-updates on all updated branches
+    --write-commit-graph  write the commit-graph after fetching
+    --stdin               accept refspecs from stdin
+
+PS D:\ARC_VIPS\ARC_VIPS> git branch -h
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --recurse-submodules  recurse through submodules
+    --format <format>     format to use for the output
+
+PS D:\ARC_VIPS\ARC_VIPS> git branch --all
+* develop
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/develop
+  remotes/origin/main
+PS D:\ARC_VIPS\ARC_VIPS> git fetch --all
+From https://github.com/Shashwat-Tripathi-GITHUB/ARC_VIPS
+ * [new branch]      feature/home-page -> origin/feature/home-page
+PS D:\ARC_VIPS\ARC_VIPS> git branch -all
+error: did you mean `--all` (with two dashes)?
+PS D:\ARC_VIPS\ARC_VIPS> git branch --all
+* develop
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/develop
+  remotes/origin/feature/home-page
+  remotes/origin/main
+PS D:\ARC_VIPS\ARC_VIPS>

@@ -1,0 +1,113 @@
+PS D:\ARC_VIPS\ARC_VIPS> git branch -a
+  backend/careers
+  backendorigin
+* develop
+  feature/home-page
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/backend/careers
+  remotes/origin/backend/login
+  remotes/origin/backendorigin
+  remotes/origin/develop
+  remotes/origin/feature/home-page
+  remotes/origin/main
+PS D:\ARC_VIPS\ARC_VIPS> git checkout feature/home-page
+Switched to branch 'feature/home-page'
+Your branch is behind 'origin/feature/home-page' by 21 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS D:\ARC_VIPS\ARC_VIPS> git pull origin feature/home-page
+From https://github.com/Shashwat-Tripathi-GITHUB/ARC_VIPS
+ * branch            feature/home-page -> FETCH_HEAD
+Updating 3ea9c2c..79ab462
+Fast-forward
+ .hintrc                                   |  16 +
+ README.md                                 |  60 +++
+ package-lock.json                         |  19 +
+ package.json                              |   1 +
+ public/assets/homepage_assets/about_1.png | Bin 0 -> 1268619 bytes
+ public/assets/homepage_assets/about_2.png | Bin 0 -> 1647283 bytes
+ public/assets/homepage_assets/dean.png    | Bin 0 -> 4586757 bytes
+ src/App.js                                |   3 +-
+ src/components/Footer.css                 | 172 +++----
+ src/components/Footer.jsx                 |  20 +-
+ src/components/NavBar.jsx                 |   4 +-
+ src/components/pages/AlumniDetails.css    |  17 +-
+ src/components/pages/AlumniDetails.jsx    | 255 +++++-----
+ src/components/pages/CareerDb.jsx         |  26 +-
+ src/components/pages/HomePage.css         | 744 ++++++++++++++++++++++++++++++
+ src/components/pages/HomePage.jsx         | 415 +++++++++++++++++
+ src/components/pages/StudentDetails.css   |  27 +-
+ src/components/pages/StudentDetails.jsx   |  68 ++-
+ 18 files changed, 1586 insertions(+), 261 deletions(-)
+ create mode 100644 .hintrc
+ create mode 100644 public/assets/homepage_assets/about_1.png
+ create mode 100644 public/assets/homepage_assets/about_2.png
+ create mode 100644 public/assets/homepage_assets/dean.png
+ create mode 100644 src/components/pages/HomePage.css
+ create mode 100644 src/components/pages/HomePage.jsx
+PS D:\ARC_VIPS\ARC_VIPS> git branch -a
+  backend/careers
+  backendorigin
+  develop
+* feature/home-page
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/backend/careers
+  remotes/origin/backend/login
+  remotes/origin/backendorigin
+  remotes/origin/develop
+  remotes/origin/feature/home-page
+  remotes/origin/main
+PS D:\ARC_VIPS\ARC_VIPS> git checkout develop
+Switched to branch 'develop'
+Your branch is behind 'origin/develop' by 4 commits, and can be fast-forwarded.
+  (use "git pull" to update your local branch)
+PS D:\ARC_VIPS\ARC_VIPS> git pull origin develop
+From https://github.com/Shashwat-Tripathi-GITHUB/ARC_VIPS
+ * branch            develop    -> FETCH_HEAD
+Updating bb4ac8b..68fb076
+Fast-forward
+ src/components/pages/AlumniDetails.css  |  17 ++-
+ src/components/pages/AlumniDetails.jsx  | 178 +++++++++++---------------------
+ src/components/pages/CareerDb.jsx       |  24 ++---
+ src/components/pages/StudentDetails.css |  27 ++++-
+ src/components/pages/StudentDetails.jsx |  64 +++++++++---
+ 5 files changed, 161 insertions(+), 149 deletions(-)
+PS D:\ARC_VIPS\ARC_VIPS> git branch -a
+  backend/careers
+  backendorigin
+* develop
+  feature/home-page
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/backend/careers
+  remotes/origin/backend/login
+  remotes/origin/backendorigin
+  remotes/origin/develop
+  remotes/origin/feature/home-page
+  remotes/origin/main
+PS D:\ARC_VIPS\ARC_VIPS> git checkout backend/login
+Switched to a new branch 'backend/login'
+branch 'backend/login' set up to track 'origin/backend/login'.
+PS D:\ARC_VIPS\ARC_VIPS> git pull origin backend/login
+From https://github.com/Shashwat-Tripathi-GITHUB/ARC_VIPS
+ * branch            backend/login -> FETCH_HEAD
+Already up to date.
+PS D:\ARC_VIPS\ARC_VIPS> git branch -a
+  backend/careers
+* backend/login
+  backendorigin
+  develop
+  feature/home-page
+  main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/backend/careers
+  remotes/origin/backend/login
+  remotes/origin/backendorigin
+  remotes/origin/develop
+  remotes/origin/feature/home-page
+  remotes/origin/main
+PS D:\ARC_VIPS\ARC_VIPS> git checkout develop
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+PS D:\ARC_VIPS\ARC_VIPS> 
