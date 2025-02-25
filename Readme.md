@@ -1,4 +1,4 @@
-"# Lab2" 
+# Lab2 
 
  & can be used to combine and chain multiple commands
  && can be used to run processes concurrently
